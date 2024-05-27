@@ -1,34 +1,24 @@
 "use client";
-import { Header } from "@app/components/Header";
-import { HeroSlider } from "@app/components/HeroSlider";
-import { AboutUs } from "@app/components/AboutUs";
-import { UpcomingEvents } from "@app/components/UpcomingEvents";
-import { PhotoGallery } from "@app/components/PhotoGallery";
-import { Footer } from "@app/components/Footer";
-import dynamic from "next/dynamic";
 
-import { Directories } from "@app/components/Directories";
-import { HeroSection } from "@app/components/HeroSection";
+import { GoogleMapComponent } from "@app/components/GoogleMap";
+import { CourseSlider } from "@app/components/km-it/CourseSlider";
+import { Footer } from "@app/components/km-it/Footer";
+import { Header } from "@app/components/km-it/Header";
+import { HeroSection } from "@app/components/km-it/HeroSection";
+import { Testimonial } from "@app/components/km-it/Testimonial";
 
-const GetInTouch = dynamic(
-  () => import("@app/components/GetInTouch").then((mod) => mod.GetInTouch),
-  {
-    loading: () => <p>A map is loading</p>,
-    ssr: false,
-  }
-);
-
-export default function Home() {
+export default function KMIT() {
   return (
-    <main className="flex w-full min-h-screen flex-col justify-between">
+    <main className="flex w-full min-h-screen flex-col items-center justify-between">
       <Header />
       <HeroSection />
-      {/* <HeroSlider /> */}
-      <AboutUs />
-      {/* <Directories /> */}
-      <UpcomingEvents />
-      <PhotoGallery />
-      <GetInTouch />
+      <CourseSlider />
+      <Testimonial />
+      <div className="max-w-7xl px-20 w-full py-10">
+        <div className="p-2 bg-orange-200 rounded-lg">
+          <GoogleMapComponent />
+        </div>
+      </div>
       <Footer />
     </main>
   );

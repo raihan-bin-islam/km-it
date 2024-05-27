@@ -8,6 +8,13 @@ import {
   Maiden_Orange,
 } from "next/font/google";
 import "../styles/globals.css";
+import "../styles/swiper-styles.css";
+
+import "swiper/element/css/pagination";
+import "swiper/element/css/navigation";
+import "swiper/element/css/effect-cards";
+import "swiper/element/css/effect-fade";
+import "swiper/element/css/effect-coverflow";
 
 const inter = Inter({ subsets: ["latin"] });
 const lato = Lato({

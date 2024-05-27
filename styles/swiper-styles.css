@@ -1,0 +1,10 @@
+swiper-container {
+  width: 100%;
+}
+
+swiper-slide {
+  /* width: 300px !important;
+  height: 300px !important; */
+  background-position: center;
+  background-size: cover;
+}

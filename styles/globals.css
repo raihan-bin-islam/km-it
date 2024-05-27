@@ -8,6 +8,9 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
 body {
-  @apply bg-mercury-50;
+  @apply bg-secondary-50;
 }

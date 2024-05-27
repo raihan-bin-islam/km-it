@@ -6,7 +6,7 @@ type Props = {};
 
 export const Footer = (props: Props) => {
   return (
-    <footer className="h-96 tablet:h-max bg-violet-600 text-white w-full">
+    <footer className="h-96 tablet:h-max bg-gradient-to-b from-orange-300 to-orange-500 text-secondary-900 w-full">
       <div className="max-w-7xl mx-auto px-20 py-4 flex flex-col h-full tablet:px-5">
         <div className="grid grid-cols-3 relative py-20 tablet:grid-cols-1 tablet:py-0">
           <div className="flex justify-between">
@@ -63,7 +63,7 @@ export const Footer = (props: Props) => {
                     width={24}
                     height={24}
                     alt="facebook-logo"
-                    style={{ filter: "invert(100%)" }}
+                    // style={{ filter: "invert(100%)" }}
                   />
                 </a>
               </li>
@@ -83,7 +83,7 @@ export const Footer = (props: Props) => {
               </li>
             </ul>
           </div>
-          <div className="absolute left-1/2 -translate-x-1/2 bottom-0 bg-mercury-400 h-[1px] w-full"></div>
+          <div className="absolute left-1/2 -translate-x-1/2 bottom-0 bg-secondary-700 h-[1px] w-full"></div>
         </div>
         <div className="flex items-center justify-center grow">
           <h2 className="text-center mt-4 tablet:mt-2 tablet:text-sm">
