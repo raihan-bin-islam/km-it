@@ -6,7 +6,7 @@ type Props = {};
 
 export const Footer = (props: Props) => {
   return (
-    <footer className="h-96 tablet:h-max bg-gradient-to-b from-orange-300 to-orange-500 text-secondary-900 w-full">
+    <footer className="h-96 tablet:h-max bg-gradient-to-b from-secondary-900 to-secondary-950 text-white w-full">
       <div className="max-w-7xl mx-auto px-20 py-4 flex flex-col h-full tablet:px-5">
         <div className="grid grid-cols-3 relative py-20 tablet:grid-cols-1 tablet:py-0">
           <div className="flex justify-between">

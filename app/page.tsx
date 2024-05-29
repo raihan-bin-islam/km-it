@@ -14,7 +14,7 @@ export default function KMIT() {
       <HeroSection />
       <CourseSlider />
       <Testimonial />
-      <div className="max-w-7xl px-20 w-full py-10">
+      <div className="max-w-7xl lg:px-20 px-4 w-full py-10">
         <div className="p-2 bg-orange-200 rounded-lg">
           <GoogleMapComponent />
         </div>

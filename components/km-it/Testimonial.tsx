@@ -30,7 +30,7 @@ export const Testimonial = (props: Props) => {
     }
   }, []);
   return (
-    <div className="max-w-7xl px-20 w-full py-10">
+    <div className="max-w-7xl lg:px-20 px-4 w-full py-10">
       <div className="flex flex-col">
         <h2 className="text-4xl font-semibold underline text-center mb-10">
           Testimonials

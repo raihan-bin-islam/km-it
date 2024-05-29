@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 
 import { SwiperContainer, register } from "swiper/element/bundle";
@@ -10,10 +10,18 @@ import { twMerge } from "tailwind-merge";
 type Props = {};
 
 export const CourseSlider = (props: Props) => {
+  const [innerWidth, setInnerWidth] = useState(768);
+
+  useEffect(() => {
+    if (typeof window !== undefined) {
+      setInnerWidth(window.innerWidth);
+    }
+  }, []);
+
   return (
     <section
       id="courses"
-      className="w-full max-w-7xl px-20 overflow-hidden py-20"
+      className="w-full max-w-7xl lg:px-20 px-4 overflow-hidden py-20"
     >
       <h2 className="text-center text-4xl font-semibold text-secondary-500">
         Our Courses
@@ -24,7 +32,7 @@ export const CourseSlider = (props: Props) => {
         quibusdam!
       </p>
       <Swiper
-        slidesPerView={2}
+        slidesPerView={innerWidth >= 768 ? 2 : 1}
         effect="coverflow"
         centeredSlides
         initialSlide={2}
@@ -37,7 +45,7 @@ export const CourseSlider = (props: Props) => {
             >
               <div
                 className={twMerge(
-                  "relative z-0 w-full p-10 flex flex-col gap-1 aspect-video mx-auto rounded-[inherit] overflow-hidden bg-gradient-to-b",
+                  "relative z-0 w-full lg:p-10 p-5 flex flex-col gap-1 aspect-video mx-auto rounded-[inherit] overflow-hidden bg-gradient-to-b",
                   index === 0
                     ? "from-orange-400 to-orange-500"
                     : index === 1
@@ -51,8 +59,8 @@ export const CourseSlider = (props: Props) => {
                     : ""
                 )}
               >
-                <Icon className="size-12 text-slate-50" />
-                <h2 className="text-2xl font-medium text-slate-50 mt-3">
+                <Icon className="lg:size-12 size-8 text-slate-50 shrink-0" />
+                <h2 className="lg:text-2xl text-xl font-medium text-slate-50 lg:mt-3">
                   {courseTitle}
                 </h2>
                 <p className="text-sm text-slate-200">{courseDesc}</p>
