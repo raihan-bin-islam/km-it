@@ -27,7 +27,7 @@ export const Header = (props: Props) => {
   return (
     <motion.header
       className={twMerge(
-        "fixed top-0 z-50 w-full bg-mercury-50 hover:bg-opacity-100 transition-all duration-150",
+        "fixed top-0 z-50 w-full bg-mercury-50 hover:bg-opacity-100 transition-all duration-150 ",
         scrollTop > scrollOffset && "bg-opacity-100"
       )}
     >

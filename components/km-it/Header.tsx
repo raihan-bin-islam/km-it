@@ -24,7 +24,7 @@ export const Header = (props: Props) => {
   return (
     <header
       className={twMerge(
-        "fixed z-50 left-0 -translate-y-0 lg:inset-[unset] lg:translate-y-0 lg:top-0 max-w-7xl w-full px-4 lg:px-20 py-6  bg-white/50 backdrop-blur-md lg:bg-transparent lg:backdrop-blur-[unset]",
+        " fixed z-50 left-0 -translate-y-0 lg:inset-[unset] lg:translate-y-0 lg:top-0 max-w-7xl w-full px-4 lg:px-20 py-6  bg-white/50 backdrop-blur-md lg:bg-transparent lg:backdrop-blur-[unset]",
         openMenu && "inset-0"
       )}
     >
@@ -62,7 +62,7 @@ export const Header = (props: Props) => {
               <Link href="/">Testimonials</Link>
             </li>
             <li className="text-secondary-500 lg:text-sm text-lg hover:text-secondary-950">
-              <Link href="/">Management</Link>
+              <Link href="/management">Management</Link>
             </li>
             <li className="text-secondary-500 lg:text-sm text-lg hover:text-secondary-950">
               <Link href="/">Contact Us</Link>
